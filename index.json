@@ -1,0 +1,27 @@
+{
+  "articles/install.html": {
+    "href": "articles/install.html",
+    "title": "Install | mongodb Wiki",
+    "keywords": "Install Install MongoDB Community Edition on macOS https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/ xcode-select --install xcode-select: error: command line tools are already installed, use \"Software Update\" in System Settings to install updates brew tap mongodb/brew brew update brew install mongodb-community@4.4 brew install mongodb-community@5.0 mongo db.adminCommand( { getParameter: 1, featureCompatibilityVersion: 1 } ) { \"featureCompatibilityVersion\" : { \"version\" : \"4.4\" }, \"ok\" : 1 } db.adminCommand( { setFeatureCompatibilityVersion: \"5.0\" } ) { \"ok\" : 1 } db.adminCommand( { getParameter: 1, featureCompatibilityVersion: 1 } ) { \"featureCompatibilityVersion\" : { \"version\" : \"5.0\" }, \"ok\" : 1 } Errors featureCompatibilityVersion Installing 6.0 has an issue with a previous version. {\"t\":{\"$date\":\"2023-06-12T08:13:13.659+01:00\"},\"s\":\"F\", \"c\":\"CONTROL\", \"id\":20573, \"ctx\":\"initandlisten\",\"msg\":\"Wrong mongod version\",\"attr\":{\"error\":\"UPGRADE PROBLEM: Found an invalid featureCompatibilityVersion document (ERROR: Location4926900: Invalid featureCompatibilityVersion document in admin.system.version: { _id: \\\"featureCompatibilityVersion\\\", version: \\\"4.4\\\" }. See https://docs.mongodb.com/master/release-notes/5.0-compatibility/#feature-compatibility. :: caused by :: Invalid feature compatibility version value, expected '5.0' or '5.3' or '6.0. See https://docs.mongodb.com/master/release-notes/5.0-compatibility/#feature-compatibility.). If the current featureCompatibilityVersion is below 5.0, see the documentation on upgrading at https://docs.mongodb.com/master/release-notes/5.0/#upgrade-procedures.\"}} ➜ ~ brew services start mongodb-community Bootstrap failed: 5: Input/output error Try re-running the command as root for richer errors. Error: Failure while executing; /bin/launchctl bootstrap gui/502 /Users/[USER]/Library/LaunchAgents/homebrew.mxcl.mongodb-community.plist exited with 5."
+  },
+  "articles/readme.html": {
+    "href": "articles/readme.html",
+    "title": "Welcome to the [] WIKI | mongodb Wiki",
+    "keywords": "Welcome to the [] WIKI Here you will find various helpful articles on running different tools etc. LINK"
+  },
+  "articles/uninstall.html": {
+    "href": "articles/uninstall.html",
+    "title": "Uninstall | mongodb Wiki",
+    "keywords": "Uninstall Install MongoDB Community Edition on macOS https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/ How to resolve featureCompatibilityVersion issue between MongoDB 3.6 and 4.2? https://stackoverflow.com/questions/58514234/how-to-resolve-featurecompatibilityversion-issue-between-mongodb-3-6-and-4-2/62591390#62591390 brew uninstall mongodb-community brew list mongodb-database-tools mongosh brew uninstall mongodb-database-tools brew uninstall mongosh brew untap mongodb/brew"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "[] Wiki | mongodb Wiki",
+    "keywords": "[] Wiki Link Check out the Articles"
+  },
+  "README.html": {
+    "href": "README.html",
+    "title": "mongodb WIKI | mongodb Wiki",
+    "keywords": "mongodb WIKI | A set of Articles to run through mongodb . Site local dotnet tool install -g docfx docfx docfx.json --serve Install Init: docfx init -q mono /Users/alexhedley/Documents/APPS/docfx/docfx.exe init -q Build: docfx docfx.json Serve: docfx serve _site mono /Users/alexhedley/Documents/APPS/docfx/docfx.exe serve _site docfx docfx.json --serve mono /Users/alexhedley/Documents/APPS/docfx/docfx.exe docfx.json --serve Get the path to docfx and run with mono : mono /Users/alexhedley/Documents/APPS/docfx/docfx.exe docfx.json --serve"
+  }
+}
