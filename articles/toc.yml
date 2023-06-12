@@ -1,2 +1,6 @@
 - name: Introduction
   href: readme.md
+- name: Install
+  href: install.md
+- name: Uninstall
+  href: uninstall.md
