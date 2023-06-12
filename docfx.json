@@ -65,7 +65,7 @@
     "cleanupCacheHistory": false,
     "disableGitFeatures": false,
     "globalMetadata": {
-      "_appTitle": "[] Wiki",
+      "_appTitle": "mongodb Wiki",
       "_appLogoPath": "images/48x48.png",
       "_appFaviconPath": "images/favicon.ico",
       "_appFooter": "Alex Hedley",
