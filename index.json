@@ -6,8 +6,8 @@
   },
   "articles/readme.html": {
     "href": "articles/readme.html",
-    "title": "Welcome to the [] WIKI | mongodb Wiki",
-    "keywords": "Welcome to the [] WIKI Here you will find various helpful articles on running different tools etc. LINK"
+    "title": "Welcome to the mongodb WIKI | mongodb Wiki",
+    "keywords": "Welcome to the mongodb WIKI Here you will find various helpful articles on running different tools etc. mongodb"
   },
   "articles/uninstall.html": {
     "href": "articles/uninstall.html",
@@ -16,8 +16,8 @@
   },
   "index.html": {
     "href": "index.html",
-    "title": "[] Wiki | mongodb Wiki",
-    "keywords": "[] Wiki Link Check out the Articles"
+    "title": "mongodb Wiki | mongodb Wiki",
+    "keywords": "mongodb Wiki mongodb Check out the Articles"
   },
   "README.html": {
     "href": "README.html",

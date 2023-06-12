@@ -37,15 +37,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/readme.md",
       "output": {
         ".html": {
           "relative_path": "articles/readme.html",
-          "hash": "8ke/C/9mMHlqjl1Br6QL5Q=="
+          "hash": "+fj+T4M/rEytIGhoixACJQ=="
         }
       },
       "is_incremental": false,
@@ -109,15 +106,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "Bpb8iWqhTkvdqs7iBGXb8Q=="
+          "hash": "euVdjxziIG9yL9bX6tyyyQ=="
         }
       },
       "is_incremental": false,
