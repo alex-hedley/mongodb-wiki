@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Install | mongodb Wiki </title>
+    <title>Upgrade | mongodb Wiki </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Install | mongodb Wiki ">
+    <meta name="title" content="Upgrade | mongodb Wiki ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../images/favicon.ico">
@@ -77,20 +77,32 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="install">Install</h1>
+<h1 id="upgrade">Upgrade</h1>
 
-<p>Install MongoDB Community Edition on macOS
-<a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/">https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/</a></p>
-<p><code>xcode-select --install</code></p>
+<p>For example you have an existing version, say 4.4.</p>
+<p><code>brew install mongodb-community@5.0</code></p>
+<p><code>mongo</code></p>
+<p><code>db.adminCommand( { getParameter: 1, featureCompatibilityVersion: 1 } )</code></p>
 <blockquote>
-<p>xcode-select: error: command line tools are already installed, use &quot;Software Update&quot; in System Settings to install updates</p>
+<p>{ &quot;featureCompatibilityVersion&quot; : { &quot;version&quot; : &quot;4.4&quot; }, &quot;ok&quot; : 1 }</p>
 </blockquote>
-<p><code>brew tap mongodb/brew</code></p>
-<p><code>brew update</code></p>
+<p><code>db.adminCommand( { setFeatureCompatibilityVersion: &quot;5.0&quot; } )</code></p>
 <blockquote>
-<p><code>brew install mongodb-community@#.#</code></p>
+<p>{ &quot;ok&quot; : 1 }</p>
 </blockquote>
-<p>Check the versions available and update accordingly.</p>
+<p><code>db.adminCommand( { getParameter: 1, featureCompatibilityVersion: 1 } )</code></p>
+<blockquote>
+<p>{ &quot;featureCompatibilityVersion&quot; : { &quot;version&quot; : &quot;5.0&quot; }, &quot;ok&quot; : 1 }</p>
+</blockquote>
+<h2 id="errors">Errors</h2>
+<p><code>featureCompatibilityVersion</code></p>
+<p>Installing 6.0 has an issue with a previous version.</p>
+<pre><code class="lang-json">{&quot;t&quot;:{&quot;$date&quot;:&quot;2023-06-12T08:13:13.659+01:00&quot;},&quot;s&quot;:&quot;F&quot;,  &quot;c&quot;:&quot;CONTROL&quot;,  &quot;id&quot;:20573,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Wrong mongod version&quot;,&quot;attr&quot;:{&quot;error&quot;:&quot;UPGRADE PROBLEM: Found an invalid featureCompatibilityVersion document (ERROR: Location4926900: Invalid featureCompatibilityVersion document in admin.system.version: { _id: \&quot;featureCompatibilityVersion\&quot;, version: \&quot;4.4\&quot; }. See https://docs.mongodb.com/master/release-notes/5.0-compatibility/#feature-compatibility. :: caused by :: Invalid feature compatibility version value, expected '5.0' or '5.3' or '6.0. See https://docs.mongodb.com/master/release-notes/5.0-compatibility/#feature-compatibility.). If the current featureCompatibilityVersion is below 5.0, see the documentation on upgrading at https://docs.mongodb.com/master/release-notes/5.0/#upgrade-procedures.&quot;}}
+</code></pre>
+<p>➜  ~ brew services start mongodb-community
+Bootstrap failed: 5: Input/output error
+Try re-running the command as root for richer errors.
+Error: Failure while executing; <code>/bin/launchctl bootstrap gui/502 /Users/[USER]/Library/LaunchAgents/homebrew.mxcl.mongodb-community.plist</code> exited with 5.</p>
 </article>
           </div>
           
@@ -99,7 +111,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/alex-hedley/mongodb-wiki/blob/main/articles/install.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/alex-hedley/mongodb-wiki/blob/main/articles/upgrade.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
