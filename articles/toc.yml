@@ -4,3 +4,5 @@
   href: install.md
 - name: Uninstall
   href: uninstall.md
+- name: Upgrade
+  href: upgrade.md

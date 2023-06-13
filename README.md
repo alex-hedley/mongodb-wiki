@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 [![github pages](https://github.com/alex-hedley/mongodb-wiki/actions/workflows/build-site.yml/badge.svg)](https://github.com/alex-hedley/mongodb-wiki/actions/workflows/build-site.yml)
+[![pages-build-deployment](https://github.com/alex-hedley/mongodb-wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/alex-hedley/mongodb-wiki/actions/workflows/pages/pages-build-deployment)
 
 ---
 
